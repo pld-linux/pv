@@ -1,12 +1,12 @@
 Summary:	Pipe Viewer
 Summary(pl):	Pipe Viewer - monitorowanie przep³ywu danych przez potok
 Name:		pv
-Version:	0.4.5
+Version:	0.8.0
 Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://www.ivarch.com/programs/sources/%{name}-%{version}.tar.gz
-# Source0-md5:	d122218c59222ca8c12bc41579ea4251
+# Source0-md5:	0afdbcbb903f696ebfc43bbe43cc15c6
 URL:		http://www.ivarch.com/programs/pv.shtml
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
