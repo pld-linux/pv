@@ -1,7 +1,7 @@
 Summary:	Pipe Viewer
 Summary(pl):	Pipe Viewer - monitorowanie przep³ywu danych przez potok
 Name:		pv
-Version:	0.4.4
+Version:	0.4.5
 Release:	1
 License:	GPL
 Group:		Applications
