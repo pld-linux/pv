@@ -4,7 +4,7 @@ Name:		pv
 Version:	0.4.0
 Release:	1
 License:	GPL
-Group:		Applications/Archiving
+Group:		Applications
 Source0:	http://www.ivarch.com/programs/sources/%{name}-%{version}.tar.gz
 URL:		http://www.ivarch.com/programs/pv.shtml
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -18,8 +18,8 @@ estimate of how long it will be until completion.
 
 %description -l pl
 Pipe Viewer jest tekstowym narzêdziem do monitorowania przep³ywu danych
-przez potok. Mo¿e byæ wstawiony w dowolny potok pomiêdzy dwa procesy ¿eby
-zwizualizowaæ prêdko¶æ z jak± dane przep³ywaj± miêdzy nimi, ile czasu im
+przez potok. Mo¿e byæ wstawiony w dowolny potok pomiêdzy dwa procesy w celu
+wizualizacji prêdko¶ci z jak± dane przep³ywaj± pomiêdzy nimi, ile czasu im
 to zajmuje, ile jeszcze zosta³o do ukoñczenia i ile mniej wiêcej czasu to
 bêdzie trwa³o.
 
