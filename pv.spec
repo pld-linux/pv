@@ -2,7 +2,7 @@ Summary:	Pipe Viewer
 Summary(pl):	Pipe Viewer - monitorowanie przep³ywu danych przez potok
 Name:		pv
 Version:	0.8.5
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/pipeviewer/%{name}-%{version}.tar.gz
@@ -12,18 +12,18 @@ BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Pipe Viewer is a terminal-based tool for monitoring the progress of data
-through a pipeline. It can be inserted into any normal pipeline between
-two processes to give a visual indication of how quickly data is passing
-through, how long it has taken, how near to completion it is, and an
-estimate of how long it will be until completion.
+Pipe Viewer is a terminal-based tool for monitoring the progress of
+data through a pipeline. It can be inserted into any normal pipeline
+between two processes to give a visual indication of how quickly data
+is passing through, how long it has taken, how near to completion it
+is, and an estimate of how long it will be until completion.
 
 %description -l pl
-Pipe Viewer jest tekstowym narzêdziem do monitorowania przep³ywu danych
-przez potok. Mo¿e byæ wstawiony w dowolny potok pomiêdzy dwa procesy w celu
-wizualizacji prêdko¶ci z jak± dane przep³ywaj± pomiêdzy nimi, ile czasu im
-to zajmuje, ile jeszcze zosta³o do ukoñczenia i ile mniej wiêcej czasu to
-bêdzie trwa³o.
+Pipe Viewer jest tekstowym narzêdziem do monitorowania przep³ywu
+danych przez potok. Mo¿e byæ wstawiony w dowolny potok pomiêdzy dwa
+procesy w celu wizualizacji prêdko¶ci z jak± dane przep³ywaj± pomiêdzy
+nimi, ile czasu im to zajmuje, ile jeszcze zosta³o do ukoñczenia i ile
+mniej wiêcej czasu to bêdzie trwa³o.
 
 %prep
 %setup -q
@@ -40,7 +40,8 @@ install autoconf/configure .
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_infodir}}
 
-%{__make} install RPM_BUILD_ROOT=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name}
 
