@@ -9,6 +9,7 @@ Source0:	http://dl.sourceforge.net/pipeviewer/%{name}-%{version}.tar.gz
 # Source0-md5:	2703a930bea7c866e3cabe42245fd7c2
 URL:		http://www.ivarch.com/programs/pv.shtml
 BuildRequires:	autoconf
+BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
