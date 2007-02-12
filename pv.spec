@@ -1,5 +1,5 @@
 Summary:	Pipe Viewer - tool for monitoring the progress of data through a pipeline
-Summary(pl):	Pipe Viewer - monitorowanie przep³ywu danych przez potok
+Summary(pl.UTF-8):   Pipe Viewer - monitorowanie przepÅ‚ywu danych przez potok
 Name:		pv
 Version:	0.9.2
 Release:	1
@@ -19,12 +19,12 @@ between two processes to give a visual indication of how quickly data
 is passing through, how long it has taken, how near to completion it
 is, and an estimate of how long it will be until completion.
 
-%description -l pl
-Pipe Viewer jest tekstowym narzêdziem do monitorowania przep³ywu
-danych przez potok. Mo¿e byæ wstawiony w dowolny potok pomiêdzy dwa
-procesy w celu wizualizacji prêdko¶ci z jak± dane przep³ywaj± pomiêdzy
-nimi, ile czasu im to zajmuje, ile jeszcze zosta³o do ukoñczenia i ile
-mniej wiêcej czasu to bêdzie trwa³o.
+%description -l pl.UTF-8
+Pipe Viewer jest tekstowym narzÄ™dziem do monitorowania przepÅ‚ywu
+danych przez potok. MoÅ¼e byÄ‡ wstawiony w dowolny potok pomiÄ™dzy dwa
+procesy w celu wizualizacji prÄ™dkoÅ›ci z jakÄ… dane przepÅ‚ywajÄ… pomiÄ™dzy
+nimi, ile czasu im to zajmuje, ile jeszcze zostaÅ‚o do ukoÅ„czenia i ile
+mniej wiÄ™cej czasu to bÄ™dzie trwaÅ‚o.
 
 %prep
 %setup -q
