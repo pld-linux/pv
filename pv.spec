@@ -1,5 +1,5 @@
 Summary:	Pipe Viewer - tool for monitoring the progress of data through a pipeline
-Summary(pl.UTF-8):   Pipe Viewer - monitorowanie przepływu danych przez potok
+Summary(pl.UTF-8):	Pipe Viewer - monitorowanie przepływu danych przez potok
 Name:		pv
 Version:	0.9.2
 Release:	1
