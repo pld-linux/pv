@@ -1,12 +1,12 @@
 Summary:	Pipe Viewer - tool for monitoring the progress of data through a pipeline
 Summary(pl.UTF-8):	Pipe Viewer - monitorowanie przepływu danych przez potok
 Name:		pv
-Version:	0.9.2
+Version:	1.0.1
 Release:	1
-License:	GPL
+License:	Artistic v2.0
 Group:		Applications
 Source0:	http://dl.sourceforge.net/pipeviewer/%{name}-%{version}.tar.gz
-# Source0-md5:	a8e31f4e38088b905f5d4f13c670315c
+# Source0-md5:	f4ca9b3e3f476b8934fc70a97e637361
 URL:		http://www.ivarch.com/programs/pv.shtml
 BuildRequires:	autoconf
 BuildRequires:	gettext-devel
@@ -49,15 +49,8 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_infodir}}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
-[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
-
-%postun
-[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
-
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc README doc/manual.html doc/NEWS doc/TODO
+%doc README doc/NEWS doc/TODO
 %attr(755,root,root) %{_bindir}/*
-%{_infodir}/*.info*
 %{_mandir}/man1/*
