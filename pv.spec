@@ -1,15 +1,20 @@
+#
+# Conditional build:
+%bcond_without	tests		# build without tests
+
 Summary:	Pipe Viewer - tool for monitoring the progress of data through a pipeline
 Summary(pl.UTF-8):	Pipe Viewer - monitorowanie przepływu danych przez potok
 Name:		pv
-Version:	1.2.0
+Version:	1.5.2
 Release:	1
 License:	Artistic v2.0
 Group:		Applications
-Source0:	http://pipeviewer.googlecode.com/files/%{name}-%{version}.tar.bz2
-# Source0-md5:	67aedf6dbcd068d5feeaa76156153f4f
+Source0:	http://www.ivarch.com/programs/sources/%{name}-%{version}.tar.bz2
+# Source0-md5:	fdcd0be1e333602f82a70921b87976b8
 URL:		http://www.ivarch.com/programs/pv.shtml
-BuildRequires:	autoconf
 BuildRequires:	gettext-devel
+# the unit tests call usleep(1)
+BuildRequires:	rc-scripts
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,18 +34,18 @@ mniej więcej czasu to będzie trwało.
 %prep
 %setup -q
 
+mv README README.iso8859
+iconv -f ISO-8859-1 -t UTF-8 README.iso8859  > README
+mv doc/NEWS doc/NEWS.iso8859
+iconv -f ISO-8859-1 -t UTF-8 doc/NEWS.iso8859 > doc/NEWS
+
 %build
-cd autoconf
-%{__autoconf}
-cd ..
-install autoconf/configure .
 %configure
 %{__make}
+%{?with_test:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_infodir}}
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
@@ -52,5 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README doc/NEWS doc/TODO
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
+%attr(755,root,root) %{_bindir}/pv
+%{_mandir}/man1/pv.1*
