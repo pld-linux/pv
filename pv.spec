@@ -12,7 +12,7 @@ Group:		Applications
 Source0:	http://www.ivarch.com/programs/sources/%{name}-%{version}.tar.bz2
 # Source0-md5:	e8597a929e836ada22a8814b1c1651d0
 URL:		http://www.ivarch.com/programs/pv.shtml
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 # the unit tests call usleep(1)
 BuildRequires:	rc-scripts
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
