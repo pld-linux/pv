@@ -9,7 +9,7 @@ Version:	1.8.9
 Release:	1
 License:	GPL v3+
 Group:		Applications
-Source0:	http://www.ivarch.com/programs/sources/%{name}-%{version}.tar.gz
+Source0:	https://www.ivarch.com/programs/sources/%{name}-%{version}.tar.gz
 # Source0-md5:	6a6ebd8ec5585c1753ffff45f5cc55a5
 URL:		http://www.ivarch.com/programs/pv.shtml
 BuildRequires:	gettext-tools >= 0.21
