@@ -5,12 +5,12 @@
 Summary:	Pipe Viewer - tool for monitoring the progress of data through a pipeline
 Summary(pl.UTF-8):	Pipe Viewer - monitorowanie przepływu danych przez potok
 Name:		pv
-Version:	1.8.14
+Version:	1.9.0
 Release:	1
 License:	GPL v3+
 Group:		Applications
 Source0:	https://www.ivarch.com/programs/sources/%{name}-%{version}.tar.gz
-# Source0-md5:	08c8b0c40d37e46cbe2b77c5de554b12
+# Source0-md5:	ec51735766e404b41dfd9ad3e9b16716
 URL:		http://www.ivarch.com/programs/pv.shtml
 BuildRequires:	gettext-tools >= 0.21
 # the unit tests call usleep(1)
@@ -51,6 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc README.md docs/{ACKNOWLEDGEMENTS,DEVELOPERS,NEWS,TODO}.md
+%doc README.md docs/{ACKNOWLEDGEMENTS,DEVELOPERS,NEWS}.md
 %attr(755,root,root) %{_bindir}/pv
 %{_mandir}/man1/pv.1*
